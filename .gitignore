@@ -1,0 +1,35 @@
+# Java / Maven / Gradle
+target/
+build/
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE / Editor
+.idea/
+.vscode/
+*.iml
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Node / Angular
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.angular/
+coverage/
