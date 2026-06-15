@@ -9,6 +9,20 @@ on:
     types: [completed]
 
 jobs:
+  debug:
+    name: Debug workflow_run event
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print event context
+        run: |
+          echo "Event name: ${{ github.event.workflow_run.event }}"
+          echo "Conclusion: ${{ github.event.workflow_run.conclusion }}"
+          echo "Head branch: ${{ github.event.workflow_run.head_branch }}"
+          echo "Full event JSON:"
+          cat <<'EOF'
+          ${{ toJson(github.event.workflow_run) }}
+          EOF
+
   sonarcloud:
     name: SonarCloud Analysis
     if: >
